@@ -1,0 +1,36 @@
+*{
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.contenedor {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.codigo-color {
+  font-size: 30px;
+  margin: 50px;
+}
+
+.cajas-color {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.caja-color {
+  width: 10vh;
+  height: 10vh;
+  margin: 2vh;
+  cursor: pointer;
+  border-radius: 20%;
+}
+
+.puntuacion {
+  margin-top: 20px;
+}
