@@ -57,7 +57,7 @@ function generarCajasColor() {
 }
 
   // Función para verificar la respuesta del jugador al  clicar una caja
-function verificarRespuesta(esCorrecto, colorCorrecto) {
+function verificarRespuesta(esCorrecto) {
   if (esCorrecto) {
     puntuacionCorrectos++;
   } else {
