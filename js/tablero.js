@@ -1,10 +1,14 @@
 'use strict';
 
+import {abrirVentana, cerrarVentana} from "./ventanas.js"
+import  {generarColorAleatorio, transformColorToStr} from "./utility.js"
+
   //Seleccionar elementos del DOM y asignarlos a variables
 const codigoColorElemento = document.getElementById('codigo-color');
 const cajasColorElemento = document.getElementById('cajas-color');
 const correctosElemento = document.getElementById('correctos');
 const incorrectosElemento = document.getElementById('incorrectos');
+const buttonReinicioElemento = document.querySelector("#btnReinicio")
 
 // MODAL
 const cerrarModal = document.querySelector('.cerrarModal');
@@ -16,24 +20,14 @@ cerrarModal.addEventListener('click', () => {
 });
 // FIN DEL MODAL
 
+buttonReinicioElemento.addEventListener("click", abrirVentana)
+
 
   // Declarar variables globales
 let puntuacionCorrectos = 0;
 let puntuacionIncorrectos = 0;
 
-  // Función para generar un color aleatorio
-function generarColorAleatorio() {
-  return {
-    r: Math.floor(Math.random() * 256),
-    g: Math.floor(Math.random() * 256),
-    b: Math.floor(Math.random() * 256)
-  };
-}
 
-// Función para generar el código de color RGB correcto
-function generarCodigoColor(color) {
-  return `RGB (${color.r}, ${color.g}, ${color.b})`;
-}
 
 // Función para generar la caja con el color complementario
 function generarCajaColorComplementario(color) {
@@ -50,7 +44,7 @@ function generarCajaColorComplementario(color) {
   const cajaComplementaria = document.createElement('div');
   cajaComplementaria.classList.add('caja-color-complementario');
   cajaComplementaria.style.backgroundColor = `rgb(${colorComplementario.r}, ${colorComplementario.g}, ${colorComplementario.b})`;
-  cajaComplementaria.textContent = "Color Complementario";
+  cajaComplementaria.textContent = "COMPLEMENTARIO";
   return cajaComplementaria;
 }
 
@@ -58,27 +52,29 @@ function generarCajaColorComplementario(color) {
 function generarCajasColor() {
   cajasColorElemento.innerHTML = ''; //limpiar de la ronda anterior
   
-  const colorCorrecto = generarColorAleatorio(); //generar color aleatorio correcto
-  const posicionCorrecta = Math.floor(Math.random() * 6); // Generar posición correcta aleatoria
-
-  codigoColorElemento.textContent = generarCodigoColor(colorCorrecto);// genera el código de color que hay que acertar
+  
+  const colorCorrecto = generarColorAleatorio();// genera el código de color que hay que acertar
+  codigoColorElemento.textContent = strColor
   
   // Generar caja con color complementario y agregarla junto al código de color
   const cajaColorComplementario = generarCajaColorComplementario(colorCorrecto);
   codigoColorElemento.parentNode.insertBefore(cajaColorComplementario, codigoColorElemento.nextSibling);
 
+  const posicionCorrecta = Math.floor(Math.random() * 6); // Generar posición correcta aleatoria
+  
   for (let i = 0; i < 6; i++) {//iterar y crear las 6cajas 
     const cajaColor = document.createElement('div');
     cajaColor.classList.add('caja-color');
     
     // Asignar el color correcto en posición aleatoria
     if (i === posicionCorrecta) {
-      cajaColor.style.backgroundColor = `rgb(${colorCorrecto.r}, ${colorCorrecto.g}, ${colorCorrecto.b})`;
-      cajaColor.addEventListener('click', () => verificarRespuesta(true, colorCorrecto));
+      cajaColor.style.backgroundColor = transformColorToStr(colorCorrecto);
+      cajaColor.addEventListener('click', () => verificarRespuesta(true));
     } else {
       // Generar colores aleatorios para las otras cajas
-      cajaColor.style.backgroundColor = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
-      cajaColor.addEventListener('click', () => verificarRespuesta(false, colorCorrecto));
+      const colorAleatorio = generarColorAleatorio()
+      cajaColor.style.backgroundColor = transformColorToStr(colorAleatorio)
+      cajaColor.addEventListener('click', () => verificarRespuesta(false));
     }
 
     cajasColorElemento.appendChild(cajaColor);
@@ -86,7 +82,7 @@ function generarCajasColor() {
 }
 
   // Función para verificar la respuesta del jugador al  clicar una caja
-function verificarRespuesta(esCorrecto, ) {
+function verificarRespuesta(esCorrecto ) {
   if (esCorrecto) {
     puntuacionCorrectos++;
   } else {

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Juego de Colores</title>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Madimi+One&family=Roboto+Slab&family=Wallpoet&display=swap');
+    
     </style>
     <link rel="stylesheet" href="./styles/tablero.css" />
     <link rel="stylesheet" href="./styles/popUp.css">
@@ -27,14 +27,14 @@
   </section>
 <!-- FIN DEL MODAL -->
 
-    <div class="contenedor">
+    <main class="contenedor">
       <section id="izquierda">
         
         <article id="codigo-color" class="codigo-color"></article>
         <article id="puntuacion" class="puntuacion">
           <h3>ACIERTOS: <span id="correctos">0</span></h3>
           <h3>FALLOS: <span id="incorrectos">0</span></h3>
-          <button onclick="abrirVentana()" id="btnReinicio">REINICIAR</button>
+          <button id="btnReinicio">REINICIAR</button>
           <div id="miVentana" class="ventana-emergente">
             <div class="contenido">
                 <p>¿ Qué quieres hacer ?</p>
@@ -48,14 +48,12 @@
       <section id="derecha">
         <article id="cajas-color" class="cajas-color"></article>
       </section>
-    </div>
+    </main>
 
     <footer>
       <p>Prueba de footer</p>
     </footer>
 
-    <script src="./scripts/tablero.js"></script>
-  
-    <script src="./scripts/ventanas.js"></script>
+    <script type="module" src="./js/tablero.js"></script>
   </body>
 </html>

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&family=Roboto+Slab&family=Wallpoet&display=swap');
+
 *{
   border: 0;
   padding: 0;
@@ -6,6 +8,7 @@
 
 body{
 background-color: lightgrey;
+font-family: "Roboto";
 }
 
 /* PRIMER MODAL DE BIENVENIDA */
@@ -110,8 +113,7 @@ h1 {
 .contenedor {
   display: flex;
   align-items: center;
-  width: 100hv;
-  height: 60vh;
+  height: 70vh;
 }
 
 #izquierda {
@@ -129,13 +131,13 @@ h1 {
 }
 
 .caja-color-complementario {
-  width: 150px;
+  width: 200px;
   height: 70px;
   margin:   10px 10px 0px 0px;
   border: solid 2px;
   border-radius: 20px;
   display: flex;
-  text-align: center;
+  justify-content: center;
   align-items: center;
 
 } 
