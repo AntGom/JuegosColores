@@ -54,7 +54,7 @@ function generarCajasColor() {
   
   
   const colorCorrecto = generarColorAleatorio();// genera el código de color que hay que acertar
-  codigoColorElemento.textContent = strColor
+  codigoColorElemento.textContent = transformColorToStr(colorCorrecto)
   
   // Generar caja con color complementario y agregarla junto al código de color
   const cajaColorComplementario = generarCajaColorComplementario(colorCorrecto);
