@@ -6,6 +6,17 @@ const cajasColorElemento = document.getElementById('cajas-color');
 const correctosElemento = document.getElementById('correctos');
 const incorrectosElemento = document.getElementById('incorrectos');
 
+// MODAL
+const cerrarModal = document.querySelector('.cerrarModal');
+const modal = document.querySelector('.modal');
+
+  // Evento para cerrar el modal
+cerrarModal.addEventListener('click', () => {
+  modal.style.display = 'none';
+});
+// FIN DEL MODAL
+
+
   // Declarar variables globales
 let puntuacionCorrectos = 0;
 let puntuacionIncorrectos = 0;
@@ -91,3 +102,5 @@ function reiniciarJuego() {
 
   //Llamar a generarCajasColor para empezar el juego
 generarCajasColor();
+
+
