@@ -6,66 +6,6 @@
 }
 
 
-
-#open {
-  background-color: gold;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-  color: #fff;
-  font-size: 14px;
-  padding: 10px 25px; 
-}
-
-.modal-contenedor{
-  display: flex;
-  background-color: rgba(0, 0, 0, 0.5);
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-  pointer-events: none;
-  opacity: 70%;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-}
-
-.modal {
-  background-color: #fff;
-  width: 600px;
-  max-width: 100%;
-  padding: 30px 50px;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  text-align: center;
-  
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 h1 {
   color: black;
   font-size: 40px;
