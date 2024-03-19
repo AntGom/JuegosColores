@@ -32,25 +32,43 @@ function generarColorAleatorio() {
 
 // Función para generar el código de color RGB correcto
 function generarCodigoColor(color) {
-  return `RGB(${color.r}, ${color.g}, ${color.b})`;
+  return `RGB (${color.r}, ${color.g}, ${color.b})`;
+}
+
+// Función para generar la caja con el color complementario
+function generarCajaColorComplementario(color) {
+  const colorComplementario = {
+    r: 255 - color.r,
+    g: 255 - color.g,
+    b: 255 - color.b
+  };
+  // Eliminar caja de rondaanterior
+  const cajaAnterior = document.querySelector('.caja-color-complementario');
+  if (cajaAnterior) {
+    cajaAnterior.remove();
+  }
+  const cajaComplementaria = document.createElement('div');
+  cajaComplementaria.classList.add('caja-color-complementario');
+  cajaComplementaria.style.backgroundColor = `rgb(${colorComplementario.r}, ${colorComplementario.g}, ${colorComplementario.b})`;
+  cajaComplementaria.textContent = "Color Complementario";
+  return cajaComplementaria;
 }
 
   // Función para generar las cajas de color
 function generarCajasColor() {
   cajasColorElemento.innerHTML = ''; //limpiar de la ronda anterior
+  
   const colorCorrecto = generarColorAleatorio(); //generar color aleatorio correcto
   const posicionCorrecta = Math.floor(Math.random() * 6); // Generar posición correcta aleatoria
 
   codigoColorElemento.textContent = generarCodigoColor(colorCorrecto);// genera el código de color que hay que acertar
-   const colorComplementario = {  //color del texto como el color complementario del color correcto
-    r: 255 - colorCorrecto.r,
-    g: 255 - colorCorrecto.g,
-    b: 255 - colorCorrecto.b
-  };
-  codigoColorElemento.style.color = `rgb(${colorComplementario.r}, ${colorComplementario.g}, ${colorComplementario.b})`;
+  
+  // Generar caja con color complementario y agregarla junto al código de color
+  const cajaColorComplementario = generarCajaColorComplementario(colorCorrecto);
+  codigoColorElemento.parentNode.insertBefore(cajaColorComplementario, codigoColorElemento.nextSibling);
 
-  for (let i = 0; i < 6; i++) {
-    const cajaColor = document.createElement('div');//iterar y crear las 4cajas 
+  for (let i = 0; i < 6; i++) {//iterar y crear las 6cajas 
+    const cajaColor = document.createElement('div');
     cajaColor.classList.add('caja-color');
     
     // Asignar el color correcto en posición aleatoria
@@ -68,7 +86,7 @@ function generarCajasColor() {
 }
 
   // Función para verificar la respuesta del jugador al  clicar una caja
-function verificarRespuesta(esCorrecto) {
+function verificarRespuesta(esCorrecto, ) {
   if (esCorrecto) {
     puntuacionCorrectos++;
   } else {
@@ -91,6 +109,7 @@ function actualizarPuntuaciones() {
   } else {
     generarCajasColor();
   }
+  
 }
 
   // Función para reiniciar el juego
@@ -102,5 +121,3 @@ function reiniciarJuego() {
 
   //Llamar a generarCajasColor para empezar el juego
 generarCajasColor();
-
-

@@ -13,7 +13,7 @@
 
   <body>
     <header>
-      <h1> ADIVINA EL COLOR </h1>
+      <h1>ADIVINA EL COLOR</h1>
     </header>
 
     <!-- MODAL -->
@@ -27,31 +27,35 @@
   </section>
 <!-- FIN DEL MODAL -->
 
-    <section id="puntuacion" class="puntuacion">
-      <h2>
-        Aciertos: <span id="correctos">0</span> 
-      </h2>
-      <h2>
-        Fallos: <span id="incorrectos">0</span>
-      </h2>
-    </section>
-    
     <div class="contenedor">
-
-      <section id="codigo-color" class="codigo-color"></section>
-
-      <section id="cajas-color" class="cajas-color"></section>
-
-      
-
+      <section id="izquierda">
+        
+        <article id="codigo-color" class="codigo-color"></article>
+        <article id="puntuacion" class="puntuacion">
+          <h3>ACIERTOS: <span id="correctos">0</span></h3>
+          <h3>FALLOS: <span id="incorrectos">0</span></h3>
+          <button onclick="abrirVentana()" id="btnReinicio">REINICIAR</button>
+          <div id="miVentana" class="ventana-emergente">
+            <div class="contenido">
+                <p>¿ Qué quieres hacer ?</p>
+                <span class="cerrar" onclick="reiniciarJuego();cerrarVentana()"> Reiniciar</span>
+                <span class="continuar" onclick="cerrarVentana() ">Continuar </span>
+            </div>
+          </div>
+        </article>
+        
+      </section>
+      <section id="derecha">
+        <article id="cajas-color" class="cajas-color"></article>
+      </section>
     </div>
-    
-    
-    
 
+    <footer>
+      <p>Prueba de footer</p>
+    </footer>
 
-
-    <footer> Idea: poner aquí algo tipo... ¿Necesitas una pista? </footer>
-
-<script type="module" src="./js/tablero.js"></script>  </body>
+    <script src="./scripts/tablero.js"></script>
+  
+    <script src="./scripts/ventanas.js"></script>
+  </body>
 </html>
