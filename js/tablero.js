@@ -9,6 +9,8 @@ const cajasColorElemento = document.getElementById('cajas-color');
 const correctosElemento = document.getElementById('correctos');
 const incorrectosElemento = document.getElementById('incorrectos');
 const buttonReinicioElemento = document.querySelector("#btnReinicio")
+const btnContinuarElemento = document.querySelector(".continuar");
+const btnReiniciarElemento = document.querySelector(".reinicio");
 
 // MODAL
 const cerrarModal = document.querySelector('.cerrarModal');
@@ -20,7 +22,10 @@ cerrarModal.addEventListener('click', () => {
 });
 // FIN DEL MODAL
 
-buttonReinicioElemento.addEventListener("click", abrirVentana)
+buttonReinicioElemento.addEventListener("click", abrirVentana);
+btnContinuarElemento.addEventListener("click", cerrarVentana);
+btnReiniciarElemento.addEventListener("click", reiniciarJuego);
+btnReiniciarElemento.addEventListener("click", cerrarVentana);
 
 
   // Declarar variables globales
