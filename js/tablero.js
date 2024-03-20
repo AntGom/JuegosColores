@@ -21,10 +21,6 @@ cerrarModal.addEventListener('click', () => {
 // FIN DEL MODAL
 
 buttonReinicioElemento.addEventListener("click", abrirVentana)
-buttonReinicioElemento.addEventListener("click", abrirVentana);
-btnContinuarElemento.addEventListener("click", cerrarVentana);
-btnReiniciarElemento.addEventListener("click", reiniciarJuego);
-btnReiniciarElemento.addEventListener("click", cerrarVentana);
 
 
   // Declarar variables globales

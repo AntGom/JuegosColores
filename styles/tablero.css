@@ -217,8 +217,7 @@ footer {
   text-align: center;
 }
 
-
-.reinicio {
+.cerrar {
   color: black;
   float: right;
   font-size: 15px;
@@ -256,25 +255,4 @@ align-items: center;
 
 .contenido > p{
 font-weight: bold;
-}
-
-/* Estilos para dispositivos móviles */
-@media (max-width: 767px) {
-  .modalContenedor {
-    width: 90%;
-  }
-}
-
-/* Estilos para tabletas */
-@media (min-width: 768px) and (max-width: 1023px) {
-  .modalContenedor {
-    width: 70%;
-  }
-}
-
-/* Estilos para ordenadores */
-@media (min-width: 1024px) {
-  .modalContenedor {
-    width: 50%;
-  }
 }

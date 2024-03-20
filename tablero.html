@@ -3,9 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Adivina el Color</title>
-    <style></style>
+    <title>Juego de Colores</title>
+    <style>
+    
+    </style>
     <link rel="stylesheet" href="./styles/tablero.css" />
+    <link rel="stylesheet" href="./styles/popUp.css">
   </head>
 
   <body>
@@ -39,9 +42,9 @@
           <button id="btnReinicio">REINICIAR</button>
           <div id="miVentana" class="ventana-emergente">
             <div class="contenido">
-              <p>¿ Qué quieres hacer ?</p>
-              <span class="reinicio"> Reiniciar</span>
-              <span class="continuar">Continuar </span>
+                <p>¿ Qué quieres hacer ?</p>
+                <span class="cerrar" onclick="reiniciarJuego();cerrarVentana()"> Reiniciar</span>
+                <span class="continuar" onclick="cerrarVentana() ">Continuar </span>
             </div>
           </div>
         </article>
