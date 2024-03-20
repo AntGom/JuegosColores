@@ -9,10 +9,11 @@
 body{
 background-color: lightgrey;
 font-family: "Roboto";
+overflow-y: hidden;
 }
 
 /* PRIMER MODAL DE BIENVENIDA */
-.modal{ 
+.modal { 
 position: fixed;
 left: 0;
 top: 0; 
@@ -171,8 +172,8 @@ h1 {
   border-radius: 20%;
   box-shadow: 3px 3px 0px black;
 }
-
  
+
 footer {
   text-align: center;
   color: white;
@@ -216,7 +217,8 @@ footer {
   text-align: center;
 }
 
-.cerrar {
+
+.reinicio {
   color: black;
   float: right;
   font-size: 15px;
@@ -255,4 +257,24 @@ align-items: center;
 .contenido > p{
 font-weight: bold;
 }
-q
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 767px) {
+  .modalContenedor {
+    width: 90%;
+  }
+}
+
+/* Estilos para tabletas */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .modalContenedor {
+    width: 70%;
+  }
+}
+
+/* Estilos para ordenadores */
+@media (min-width: 1024px) {
+  .modalContenedor {
+    width: 50%;
+  }
+}

@@ -3,33 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Juego de Colores</title>
-    <style>
-    
-    </style>
+    <title>Adivina el Color</title>
+    <style></style>
     <link rel="stylesheet" href="./styles/tablero.css" />
-    <link rel="stylesheet" href="./styles/popUp.css">
   </head>
 
   <body>
     <header>
-      <h1>ADIVINA EL COLOR</h1>
+      <h1>ADIVINA EL COLOR 🎨</h1>
     </header>
 
     <!-- MODAL -->
-  <section class="modal">
-    <div class="modalContenedor">
-      <img src="mondongo.jpg" alt="mondonguito" class="modalImg">
+    <section class="modal">
+      <div class="modalContenedor">
+        <img src="mondongo.jpg" alt="mondonguito" class="modalImg" />
         <h2 class="modalTitulo">¿Preparado?</h2>
-        <p class="modalTexto">Lionel Andrés Messi Cuccittini (Rosario, 24 de junio de 1987) es un futbolista argentino que juega como delantero o centrocampista. Desde 2023, integra el plantel del Inter Miami de la MLS canadoestadounidense. Es también internacional con la selección de Argentina, de la que es capitán.</p>
+        <p class="modalTexto">
+          Lionel Andrés Messi Cuccittini (Rosario, 24 de junio de 1987) es un
+          futbolista argentino que juega como delantero o centrocampista. Desde
+          2023, integra el plantel del Inter Miami de la MLS
+          canadoestadounidense. Es también internacional con la selección de
+          Argentina, de la que es capitán.
+        </p>
         <a href="#" class="cerrarModal" class="cerrarModal">LETS GO</a>
-    </div>
-  </section>
-<!-- FIN DEL MODAL -->
+      </div>
+    </section>
+    <!-- FIN DEL MODAL -->
 
     <main class="contenedor">
       <section id="izquierda">
-        
         <article id="codigo-color" class="codigo-color"></article>
         <article id="puntuacion" class="puntuacion">
           <h3>ACIERTOS: <span id="correctos">0</span></h3>
@@ -37,13 +39,12 @@
           <button id="btnReinicio">REINICIAR</button>
           <div id="miVentana" class="ventana-emergente">
             <div class="contenido">
-                <p>¿ Qué quieres hacer ?</p>
-                <span class="cerrar" onclick="reiniciarJuego();cerrarVentana()"> Reiniciar</span>
-                <span class="continuar" onclick="cerrarVentana() ">Continuar </span>
+              <p>¿ Qué quieres hacer ?</p>
+              <span class="reinicio"> Reiniciar</span>
+              <span class="continuar">Continuar </span>
             </div>
           </div>
         </article>
-        
       </section>
       <section id="derecha">
         <article id="cajas-color" class="cajas-color"></article>
