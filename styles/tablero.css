@@ -45,6 +45,7 @@ body{
 }
 
 .modalTitulo {
+  margin: 3px;
   font-size: 2rem;
   color: #0307f1;
   -webkit-text-fill-color: rgb(228, 238, 38);
