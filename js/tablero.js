@@ -99,7 +99,7 @@ function actualizarPuntuaciones() {
     alert('Eres una Máquina');
     reiniciarJuego();
   } else if (puntuacionIncorrectos === 3) {
-    alert('Vete a casa, Looser');
+    
     reiniciarJuego();
   } else {
     generarCajasColor();
