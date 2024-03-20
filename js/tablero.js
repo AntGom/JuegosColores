@@ -14,7 +14,10 @@ const btnReiniciarElemento = document.querySelector(".reinicio");
 
 // MODAL
 const cerrarModal = document.querySelector('.cerrarModal');
-const modal = document.querySelector('.modal');
+const modal = document.querySelector('.modalBienvenida');
+
+const modalLose = document.getElementsByClassName('modalLose');
+const CerrarModalLose = document.getElementsByClassName('botonCerrar');
 
   // Evento para cerrar el modal
 cerrarModal.addEventListener('click', () => {
@@ -99,7 +102,13 @@ function actualizarPuntuaciones() {
     alert('Eres una Máquina');
     reiniciarJuego();
   } else if (puntuacionIncorrectos === 3) {
-    
+    modalLose[0].style.display = 'block';
+    if (CerrarModalLose[0]) {
+      CerrarModalLose[0].addEventListener('click', () => {
+        modalLose[0].style.display = 'none';
+      });
+    }
+
     reiniciarJuego();
   } else {
     generarCajasColor();

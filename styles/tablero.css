@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Madimi+One&family=Roboto+Slab&family=Wallpoet&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
 
 *{
   border: 0;
@@ -15,18 +15,29 @@ body{
 }
 
 /* PRIMER MODAL DE BIENVENIDA */
-.modal { 
-  position: absolute;
+.modalBienvenida{ 
+  position: fixed;
   left: 0;
   top: 0; 
   bottom: 0;
   right: 0;
   background: #111111bd;
   display: flex;
-  align-items: stretch;
   opacity: 1;
-/* pointer-events: none; */
-}
+  }
+
+
+.modalLose { 
+  z-index: 1;
+  position: fixed;
+  left: 0;
+  top: 0; 
+  bottom: 0;
+  right: 0;
+  background: #111111bd;
+  display: none;
+  }
+
 
 .modalContenedor{
   margin: auto;
@@ -35,13 +46,11 @@ body{
   background-color: #f9faf7;
   border-radius: 20px;
   padding: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   display: grid;
   place-items: center;
   text-align: center;
 }
+
 
 .modalImg {
   width: 40%;
@@ -98,8 +107,6 @@ body{
   color: #0307f1;
   font-size: 1.5rem;
   margin: 20px;
-  display: inline-block;
-  transition: background-color .3s;
 }
 
 .cerrarModal:hover {
