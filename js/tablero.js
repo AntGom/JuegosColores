@@ -19,6 +19,9 @@ const modal = document.querySelector('.modalBienvenida');
 const modalLose = document.getElementsByClassName('modalLose');
 const CerrarModalLose = document.getElementsByClassName('botonCerrar');
 
+const modalWin = document.getElementsByClassName('modalWin');
+const CerrarModalWin = document.getElementsByClassName('botonCerrar');
+
   // Evento para cerrar el modal
 cerrarModal.addEventListener('click', () => {
   modal.style.display = 'none';
@@ -99,10 +102,24 @@ function actualizarPuntuaciones() {
   correctosElemento.textContent = puntuacionCorrectos;
   incorrectosElemento.textContent = puntuacionIncorrectos;
   if (puntuacionCorrectos === 3) {
-    alert('Eres una Máquina');
+
+
+
+    modalWin[0].style.display = 'block';
+    if (CerrarModalWin[0]) {
+      CerrarModalWin[0].addEventListener('click', () => {
+        modalWin[0].style.display = 'none';
+      });
+    }
     reiniciarJuego();
+
+
+
+
   } else if (puntuacionIncorrectos === 3) {
-    modalLose[0].style.display = 'block';
+
+
+    modalLose[0].style.display = 'flex';
     if (CerrarModalLose[0]) {
       CerrarModalLose[0].addEventListener('click', () => {
         modalLose[0].style.display = 'none';

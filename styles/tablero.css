@@ -24,11 +24,10 @@ body{
   background: #111111bd;
   display: flex;
   opacity: 1;
-  }
+}
 
 
-.modalLose { 
-  z-index: 1;
+.modalLose {
   position: fixed;
   left: 0;
   top: 0; 
@@ -36,7 +35,17 @@ body{
   right: 0;
   background: #111111bd;
   display: none;
-  }
+}
+
+.modalWin {
+  position: fixed;
+  left: 0;
+  top: 0; 
+  bottom: 0;
+  right: 0;
+  background: #111111bd;
+  display: none;
+}
 
 
 .modalContenedor{
@@ -49,6 +58,7 @@ body{
   display: grid;
   place-items: center;
   text-align: center;
+  
 }
 
 
