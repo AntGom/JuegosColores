@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Madimi+One&family=Roboto+Slab&family=Wallpoet&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap')
+
 *{
   border: 0;
   padding: 0;
@@ -7,53 +9,70 @@
 }
 
 body{
-background-color: lightgrey;
-font-family: "Roboto";
-
-overflow-y: hidden;
+  background-color: lightgrey;
+  font-family: "Madimi One", monospace;
+  height: 100px;
 }
 
 /* PRIMER MODAL DE BIENVENIDA */
 .modal { 
-position: fixed;
-left: 0;
-top: 0; 
-bottom: 0;
-right: 0;
-background: #111111bd;
-display: flex;
-opacity: 1;
+  position: absolute;
+  left: 0;
+  top: 0; 
+  bottom: 0;
+  right: 0;
+  background: #111111bd;
+  display: flex;
+  opacity: 1;
 /* pointer-events: none; */
 }
 
-.modal--close{
-opacity: 0;
-pointer-events: unset;
+.modalContenedor{
+  margin: auto;
+  min-width: 60%;
+  max-width: 300px;
+  background-color: #f9faf7;
+  border-radius: 8px;
+  padding: 15px;
+  display: grid;
+  place-items: center;
+  text-align: center;
 }
 
-.modalContenedor{
-margin: auto;
-width: 50%;
-max-width: 300px;
-background-color: #e3fc02;
-border-radius: 8px;
-padding: 15px;
-display: grid;
-place-items: center;
-text-align: center;
-}
-.modalTitulo {
-font-size: 2rem;
-}
-.modalTexto{
-margin-bottom: 10px;
-}
 .modalImg {
-width: 40%;
-max-width: 300px;
+  width: 40%;
+  max-width: 300px;
 }
+
+.modalTitulo {
+  font-size: 2rem;
+  color: #0307f1;
+  -webkit-text-fill-color: rgb(228, 238, 38);
+  -webkit-text-stroke: 2px #0307f1;
+}
+
+.modalTexto{
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  font: bold;
+  color: black;
+  -webkit-text-fill-color: rgb(30, 255, 0);
+  -webkit-text-stroke: 1px black;
+  /*color: #0307f1;*/
+}
+
+.modalTexto1{
+  margin-bottom: 20px;
+  color: rgb(122, 14, 122);
+}
+
+.modalTexto2{
+  margin-bottom: 20px;
+  font-size: 0.75rem;
+}
+
 .cerrarModal {
-background:  linear-gradient(
+  background:  linear-gradient(
     90deg,
     rgba(255, 0, 0, 0.53) 0%,
     rgba(255, 153, 0, 0.53) 10%,
@@ -66,21 +85,21 @@ background:  linear-gradient(
     rgba(186, 12, 248, 0.53) 80%,
     rgba(251, 7, 217, 0.53) 90%,
     rgba(255, 0, 0, 0.53) 100%
-);
-color: #0307f1;
-padding: 1em 3em;
-border: none;
-border-radius: 5px;
-cursor: pointer;
-font-size: 1rem;
-margin-top: 10px;
-display: inline-block;
-transition: background-color .3s;
-
+  );
+  padding: 1em 3em;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #0307f1;
+  font-size: 1.5rem;
+  margin: 20px;
+  display: inline-block;
+  transition: background-color .3s;
 }
+
 .cerrarModal:hover {
-background-color: #0307f1;
-color: #e3fc02;
+  background-color: #0307f1;
+  color: #e3fc02;
 }
 /* FIN DEL PRIMER MODAL */
 
@@ -259,21 +278,29 @@ font-weight: bold;
 }
 
 /* Estilos para dispositivos móviles */
-@media (max-width: 767px) {
+@media screen and (max-width: 600px) {
   .modalContenedor {
     width: 90%;
   }
 }
 
 /* Estilos para tabletas */
-@media (min-width: 768px) and (max-width: 1023px) {
+@media screen and (min-width: 800px) {
+  body {
+    background-color: #0307f1;
+  }
+
   .modalContenedor {
     width: 70%;
   }
 }
 
 /* Estilos para ordenadores */
-@media (min-width: 1024px) {
+@media screen and (min-width: 1000px) {
+  body{
+    background-color: brown;
+  }
+
   .modalContenedor {
     width: 50%;
   }
