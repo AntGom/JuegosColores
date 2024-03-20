@@ -9,9 +9,9 @@
 }
 
 body{
-  background-color: lightgrey;
+  background-color: lightgray;
   font-family: "Madimi One", monospace;
-  height: 100px;
+/*height: 100px;*/
 }
 
 /* PRIMER MODAL DE BIENVENIDA */
@@ -23,6 +23,7 @@ body{
   right: 0;
   background: #111111bd;
   display: flex;
+  align-items: stretch;
   opacity: 1;
 /* pointer-events: none; */
 }
@@ -32,8 +33,11 @@ body{
   min-width: 60%;
   max-width: 300px;
   background-color: #f9faf7;
-  border-radius: 8px;
+  border-radius: 20px;
   padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   display: grid;
   place-items: center;
   text-align: center;
@@ -89,7 +93,7 @@ body{
   );
   padding: 1em 3em;
   border: none;
-  border-radius: 8px;
+  border-radius: 20px;
   cursor: pointer;
   color: #0307f1;
   font-size: 1.5rem;
@@ -105,7 +109,6 @@ body{
 /* FIN DEL PRIMER MODAL */
 
 h1 {
-  color: black;
   background:  linear-gradient(
       90deg,
       rgba(255, 0, 0, 0.53) 0%,
@@ -120,16 +123,17 @@ h1 {
       rgba(251, 7, 217, 0.53) 90%,
       rgba(255, 0, 0, 0.53) 100%
   );
+  color: black;
   text-align: center;
-  padding: 40px;
+  padding: 30px;
+  max-height: 30px;
+  min-width: 158px;
   border: solid 2px;
   border-radius: 20px;
-  width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  grid-area: h1;
-
 }
 
 .contenedor {
@@ -146,62 +150,31 @@ h1 {
   width: 50%;
 }
 .codigo-color {
-  font-size: 20px;
+  font-size: 30px;
   font-weight: bolder;
-  margin-bottom: 50px;
-  text-align: start;
+  margin: 0px 10px 30px 35px;
 }
 
 .caja-color-complementario {
-  width: 200px;
-  height: 70px;
-  margin:   10px 10px 0px 0px;
+  width: 150px;
+  height: 60px;
+  margin: 0px 10px 30px 30px;
   border: solid 2px;
   border-radius: 20px;
+  box-shadow: 3px 3px 0px black;
   display: flex;
   justify-content: center;
   align-items: center;
-
 } 
 
 .puntuacion {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: start;
+  align-items: center;
+  margin: 0px 10px 30px 35px;
 }
 
-#derecha {
-  margin:  10px;
-  cursor: pointer;
-  width: 50%;
-  float: right;
-}
-
-.cajas-color {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.caja-color {
-  width: 70px;
-  height: 70px;
-  margin:  10px;
-  cursor: pointer;
-  border: solid 2px;
-  border-radius: 20%;
-  box-shadow: 3px 3px 0px black;
-}
- 
-
-footer {
-  text-align: center;
-  color: white;
-  font-size: 30px;
-  background-color: rgba(26, 135, 7, 0.8);
-  margin-top: 20px;
-}
 
 /*----------- Botón Reiniciar------------- */
 #btnReinicio{
@@ -209,7 +182,7 @@ footer {
   height: 40px;
   border: solid 2px black;
   box-shadow: 3px 3px 0ch black;
-  border-radius: 5%;
+  border-radius: 15px;
   cursor: pointer;
   font-weight: bold;
   font-size: 20px;
@@ -231,12 +204,17 @@ footer {
   margin: 15% auto;
   padding: 20px;
   border: 2px solid black;
+  border-radius: 20px;
   width: 80%;
   height: 18%;
   max-width: 400px;
   position: relative;
   text-align: center;
 }
+
+.contenido > p{
+  font-weight: bold;
+  }
 
 .reinicio {
   color: black;
@@ -248,7 +226,7 @@ footer {
   width: 90px;
   height: 25px;
   border: solid 1px;
-  border-radius: 5%;
+  border-radius: 10px;
   box-shadow: 3px 3px 0px black;
   display: flex;
   justify-content: center;
@@ -266,17 +244,49 @@ cursor: pointer;
 width: 90px;
 height: 25px;
 border: solid 1px;
-border-radius: 5%;
+border-radius: 10px;
 box-shadow: 3px 3px 0px black;
 display: flex;
 justify-content: center;
 align-content: center;
 align-items: center;
 }
+/*---------FIN Botón Reiniciar----------- */
 
-.contenido > p{
-font-weight: bold;
+#derecha {
+  margin: 10px;
+  cursor: pointer;
+  width: 50%;
+  float: right;
 }
+
+.cajas-color {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+  flex-direction: column;
+}
+
+.caja-color {
+  width: 60px;
+  height: 60px;
+  margin:  5px 0px 5px 30px;
+  cursor: pointer;
+  border: solid 2px;
+  border-radius: 20%;
+  box-shadow: 3px 3px 0px black;
+}
+ 
+
+footer {
+  text-align: center;
+  color: white;
+  font-size: 10px;
+  background-color: rgba(26, 135, 7, 0.8);
+  margin-top: 20px;
+}
+
 
 /* Estilos para dispositivos móviles */
 @media screen and (max-width: 600px) {
@@ -294,6 +304,18 @@ font-weight: bold;
   .modalContenedor {
     width: 70%;
   }
+
+  .cajas-color {
+    flex-direction: initial ;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .caja-color {
+    width: 80px;
+    height: 80px;
+    margin: 15px;
+  }
 }
 
 /* Estilos para ordenadores */
@@ -304,5 +326,17 @@ font-weight: bold;
 
   .modalContenedor {
     width: 50%;
+  }
+
+  .cajas-color {
+    flex-direction: initial ;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+  }
+
+  .caja-color {
+    width: 100px;
+    height: 100px;
+    margin: 15px;
   }
 }
