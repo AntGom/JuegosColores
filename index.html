@@ -7,24 +7,24 @@
     <style>
     
     </style>
-    <link rel="stylesheet" href="./styles/tablero.css" />
+    <link rel="stylesheet" href="./styles/tableroY.css" />
     <link rel="icon" type="image/png" sizes="16x16" href="favicon.png"> 
   </head>
 
   <body>
     <header>
-<!--------------BOTÓN INFORMACIÓN--------------->
-    <button id="btnInfo">Info</button>
-    <section id="infoVentana" class="ventanaInfo">
-      <article class="informacion">
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt dolorum itaque quis vel qui ol?</p>
-        <span class="cerrarInfo">Cerrar </span>
-      </article>
-    </section>
-<!------------FIN BOTÓN INFORMACIÓN------------->
-
       <h1>ADIVINA EL COLOR 🎨</h1>
+
+<!--------------BOTÓN INFORMACIÓN--------------->
+      <button id="btnInfo">Info</button>
+      <section id="infoVentana" class="ventanaInfo">
+        <article class="informacion">
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt dolorum itaque quis vel qui ol?</p>
+          <span class="cerrarInfo">Cerrar </span>
+        </article>
+      </section>
     </header>
+<!------------FIN BOTÓN INFORMACIÓN------------->
 
 <!---------------MODAL BIENVENIDA---------------->
   <section class="modalBienvenida">
@@ -84,19 +84,19 @@
 <!--------------MODALES GANAR Y PERDER--------------->
     <section class="modalLose">
       <div class="modalContenedor">
-        <img src="lose.png" alt="mondonguito" class="modalImg">
+        <img src="./img/lose.png" alt="Game Over" class="modalImg">
           <h2 class="modalTitulo">LOOOOOSER</h2>
-          <p class="modalTexto">vaya pringao no sabes los colores? jaj</p>
-          <a href="#" class="botonCerrar">Try again😢</a>
+          <p class="modalTexto">Vaya pringao no sabes los colores? jaj</p>
+          <a href="#" class="botonCerrar">OTRA VEZ 😢</a>
       </div>
     </section>
   
     <section class="modalWin">
       <div class="modalContenedor">
-        <img src="win.png" alt="mondongaso" class="modalImg">
+        <img src="./img/win.png" alt="Ganador" class="modalImg">
           <h2 class="modalTitulo">HAS GANADO🤑</h2>
           <p class="modalTexto">Enhorabuena! para nada eres daltonico crack</p>
-          <a href="#" class="cerrarWin">va otra vez</a>
+          <a href="#" class="cerrarWin">¡OTRA RONDA!</a>
       </div>
     </section>
 <!-------------FIN MODALES GANAR Y PERDER-------------->
