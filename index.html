@@ -7,7 +7,7 @@
     <style>
     
     </style>
-    <link rel="stylesheet" href="./tableroY.css" />
+    <link rel="stylesheet" href="./styles/tablero.css" />
     <link rel="icon" type="image/png" sizes="16x16" href="favicon.png"> 
   </head>
 
@@ -26,10 +26,10 @@
       <h1>ADIVINA EL COLOR 🎨</h1>
     </header>
 
-<!------------PRIMER MODAL BIENVENIDA------------->
+<!---------------MODAL BIENVENIDA---------------->
   <section class="modalBienvenida">
     <div class="modalContenedor">
-      <img src="ruedaColores.png" alt="Rueda Cromática" class="modalImg">
+      <img src="./img/ruedaColores.png" alt="Rueda Cromática" class="modalImg">
         <h2 class="modalTitulo">¿Preparado?</h2>
         <p class="modalTexto">¡ADIVINA EL COLOR CORRECTO!</p>
 
@@ -40,25 +40,7 @@
         <a href="#" class="cerrarModal" class="cerrarModal">EMPEZAR</a>
     </div>
   </section>
-
-  <section class="modalLose">
-    <div class="modalContenedor">
-      <img src="lose.png" alt="mondonguito" class="modalImg">
-        <h2 class="modalTitulo">LOOOOOSER</h2>
-        <p class="modalTexto">vaya pringao no sabes los colores? jaj</p>
-        <a href="#" class="botonCerrar">Try again😢</a>
-    </div>
-  </section>
-
-  <section class="modalWin">
-    <div class="modalContenedor">
-      <img src="win.png" alt="mondongaso" class="modalImg">
-        <h2 class="modalTitulo">HAS GANADO🤑</h2>
-        <p class="modalTexto">Enhorabuena! para nada eres daltonico crack</p>
-        <a href="#" class="cerrarWin">va otra vez</a>
-    </div>
-  </section>
-<!-----------------FIN PRIMER MODAL----------------->
+<!----------------FIN MODAL BIENVENIDA---------------->
 
     <main class="contenedor">
       
@@ -66,7 +48,7 @@
         
         <article id="codigo-color" class="codigo-color"></article>
 
-<!------------PISTA COLOR COMPLEMENTARIO------------>
+<!-------------PISTA COLOR COMPLEMENTARIO------------->
         <article class="pistaColorComplementario">
           <div class="contenidoPistaColor">
             <div class="vistaAnterior">❔</div>
@@ -79,7 +61,7 @@
           <h3>ACIERTOS: <span id="correctos">0</span></h3>
           <h3>FALLOS: <span id="incorrectos">0</span></h3>
 
-<!-----------------BOTÓN REINICIAR----------------->
+<!------------------BOTÓN REINICIAR------------------>
           <button id="btnReinicio">REINICIAR</button>
           <div id="miVentana" class="ventana-emergente">
             <div class="contenido">
@@ -88,7 +70,7 @@
                 <span class="continuar">Continuar </span>
             </div>
           </div>
-<!---------------FIN BOTÓN REINICIAR--------------->
+<!----------------FIN BOTÓN REINICIAR---------------->
 
         </article>        
       </section>
@@ -99,11 +81,31 @@
       
     </main>
 
+<!--------------MODALES GANAR Y PERDER--------------->
+    <section class="modalLose">
+      <div class="modalContenedor">
+        <img src="lose.png" alt="mondonguito" class="modalImg">
+          <h2 class="modalTitulo">LOOOOOSER</h2>
+          <p class="modalTexto">vaya pringao no sabes los colores? jaj</p>
+          <a href="#" class="botonCerrar">Try again😢</a>
+      </div>
+    </section>
+  
+    <section class="modalWin">
+      <div class="modalContenedor">
+        <img src="win.png" alt="mondongaso" class="modalImg">
+          <h2 class="modalTitulo">HAS GANADO🤑</h2>
+          <p class="modalTexto">Enhorabuena! para nada eres daltonico crack</p>
+          <a href="#" class="cerrarWin">va otra vez</a>
+      </div>
+    </section>
+<!-------------FIN MODALES GANAR Y PERDER-------------->
+
     <footer>
       <p>Derechos de Autor: Grupo 2 de Proyectos en Hack a Boss 2024</p>
     </footer>
 
-<!--------------------ANIMACIÓN-------------------->
+<!---------------------ANIMACIÓN--------------------->
     <div class="container">
       <div class="burbujas">
         <span style="--i:11;"></span>
