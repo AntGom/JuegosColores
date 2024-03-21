@@ -12,6 +12,15 @@ const buttonReinicioElemento = document.querySelector("#btnReinicio")
 const btnContinuarElemento = document.querySelector(".continuar");
 const btnReiniciarElemento = document.querySelector(".reinicio");
 
+
+
+//AUUdios
+const audioAcierto = new Audio('audio/win1.mp3');
+const audioFallo = new Audio('audio/lose1.mp3');
+const audioVictoria = new Audio('audio/victoria.mp3');
+const audioDerrota = new Audio('audio/derrota.mp3');
+console.log(audioAcierto.play());
+
 // MODAL
 const cerrarModal = document.querySelector('.cerrarModal');
 const modal = document.querySelector('.modalBienvenida');
@@ -103,9 +112,9 @@ function actualizarPuntuaciones() {
   incorrectosElemento.textContent = puntuacionIncorrectos;
   if (puntuacionCorrectos === 3) {
 
+    audioVictoria.play();
 
-
-    modalWin[0].style.display = 'block';
+    modalWin[0].style.display = 'flex';
     if (CerrarModalWin[0]) {
       CerrarModalWin[0].addEventListener('click', () => {
         modalWin[0].style.display = 'none';
@@ -118,7 +127,7 @@ function actualizarPuntuaciones() {
 
   } else if (puntuacionIncorrectos === 3) {
 
-
+    audioDerrota.play();
     modalLose[0].style.display = 'flex';
     if (CerrarModalLose[0]) {
       CerrarModalLose[0].addEventListener('click', () => {
@@ -131,13 +140,22 @@ function actualizarPuntuaciones() {
     generarCajasColor();
   }
 }
-
+function actualizarPuntuacionesConSonido() {
+if (puntuacionCorrectos === 1 || puntuacionCorrectos === 2) {
+  audioAcierto.play();
+}
+else if (puntuacionIncorrectos === 1) {
+  audioFallo.play();
+}
+}
   // Función para reiniciar el juego
 function reiniciarJuego() {
   puntuacionCorrectos = 0;
   puntuacionIncorrectos = 0;
   actualizarPuntuaciones();
+  actualizarPuntuacionesConSonido(); ////////////////////////////////
 }
 
   //Llamar a generarCajasColor para empezar el juego
 generarCajasColor();
+
