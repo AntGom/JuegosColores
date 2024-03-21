@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
 
-*{
-  border: 0;
+* {
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
@@ -9,6 +9,9 @@
 body{
   background-color: rgba(251, 179, 149, 0.685);
   font-family: "Madimi One", monospace;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 h1 {
@@ -53,7 +56,9 @@ h1 {
 }*/
 
 #btnInfo{
-  margin: 30px 0px 0px 0px;
+  position: fixed;
+  right: 5px;
+  bottom: 6rem;
   border: solid 2px black;
   border-radius: 15px;
   width: 50px;
@@ -246,6 +251,7 @@ h1 {
 /*--------------FIN PRIMER MODAL--------------*/
 
 .contenedor {
+  flex-grow: 1;
   height: 70vh;
   display: flex;
   align-items: center;
