@@ -26,7 +26,6 @@ const audioAcierto = new Audio('audio/win1.mp3');
 const audioFallo = new Audio('audio/lose1.mp3');
 const audioVictoria = new Audio('audio/victoria.mp3');
 const audioDerrota = new Audio('audio/derrota.mp3');
-console.log(audioAcierto.play());
 
 // MODAL
 const cerrarModal = document.querySelector('.cerrarModal');
