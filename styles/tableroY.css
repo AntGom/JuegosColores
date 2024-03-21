@@ -6,19 +6,22 @@
   box-sizing: border-box;
 }
 
+
 body{
   background-color: rgba(251, 179, 149, 0.685);
   font-family: "Madimi One", monospace;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+
 }
 
-h1 {
+
+h1{
   border: solid 2px;
   border-radius: 20px;
   padding: 35px;
-  max-height: 30px;
+  max-height: 150px;
   min-width: 158px;
   background:  linear-gradient(
       90deg,
@@ -269,6 +272,7 @@ h1 {
   margin: 20px 10px 10px 35px;
   font-size: 30px;
   font-weight: bolder;
+  text-align: center;
 }
 
 /*----------PISTA COLOR COMPLEMENTARIO----------*/
@@ -567,6 +571,7 @@ h1 {
 /*-----------FIN MODALES GANAR Y PERDER-----------*/
  
 footer {
+  height: 50px;
   margin-top: 40px;
   border: solid 2px;
   border-radius: 20px;
@@ -651,6 +656,7 @@ footer {
   .codigo-color {
     margin: 0px 10px 15px 35px;
     font-size: 35px;
+    text-align: center;
   }
 
   .pistaColorComplementario {
