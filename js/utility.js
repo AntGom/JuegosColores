@@ -11,10 +11,10 @@
 
   }
 
-  function transformColorToStr(color){
+  function pasarColorAStr(color){
     return `RGB(${color.r}, ${color.g}, ${color.b})`
   }
   
 
-  export {generarColorAleatorio, transformColorToStr}
+  export {generarColorAleatorio, pasarColorAStr}
 

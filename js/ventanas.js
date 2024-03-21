@@ -8,4 +8,12 @@ function cerrarVentana() {
     document.getElementById("miVentana").style.display = "none";
 }
 
-export {abrirVentana, cerrarVentana}
+function abrirInfo() {
+    document.getElementById("infoVentana").style.display = "block";
+}
+
+function cerrarInfo() {
+    document.getElementById("infoVentana").style.display = "none";
+}
+
+export {abrirVentana, cerrarVentana, abrirInfo, cerrarInfo};
