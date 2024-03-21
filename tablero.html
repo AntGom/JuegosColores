@@ -13,6 +13,16 @@
 
   <body>
     <header>
+      <!--Botón Información-->
+      <button id="btnInfo">Info</button>
+          <section id="infoVentana" class="ventanaInfo">
+            <article class="informacion">
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt dolorum itaque quis vel qui ol?</p>
+              <span class="cerrarInfo">Cerrar </span>
+            </article>
+          </section>
+    <!--FIN Botón Información-->
+
       <h1>ADIVINA EL COLOR 🎨</h1>
     </header>
 
@@ -58,6 +68,15 @@
         
         <article id="codigo-color" class="codigo-color"></article>
 
+        <!--Caja de Pista con color complementario-->
+        <article class="pistaColorComplementario">
+          <div class="contenidoPistaColor">
+            <div class="vistaAnterior">❔</div>
+            <div class="vistaPosterior"></div>
+          </div>
+        </article>
+        <!--FIN Caja de Pista con color complementario-->
+        
         <article id="puntuacion" class="puntuacion">
           <h3>ACIERTOS: <span id="correctos">0</span></h3>
           <h3>FALLOS: <span id="incorrectos">0</span></h3>
