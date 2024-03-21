@@ -20,7 +20,7 @@ const modalLose = document.getElementsByClassName('modalLose');
 const CerrarModalLose = document.getElementsByClassName('botonCerrar');
 
 const modalWin = document.getElementsByClassName('modalWin');
-const CerrarModalWin = document.getElementsByClassName('botonCerrar');
+const CerrarModalWin = document.getElementsByClassName('cerrarWin');
 
   // Evento para cerrar el modal
 cerrarModal.addEventListener('click', () => {
