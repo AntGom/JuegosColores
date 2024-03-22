@@ -83,22 +83,26 @@
 <!---------------FIN MODAL BIENVENIDA--------------->
 
 <!--------------MODALES GANAR Y PERDER--------------->
-    <section class="modalLose">
-      <div class="modalContenedor">
-        <img src="./img/lose.png" alt="Game Over" class="modalImg">
+    
+     <section class="modalFinal">
+    
+      <!--<section class="modalLose">-->
+        <div class="modalContenedor" id="modalContenedorLose">
+          <img src="./img/lose.png" alt="Game Over" class="modalImg">
           <h2 class="modalTitulo">LOOOOOSER</h2>
           <p class="modalTexto">Vaya pringao, ¿no sabes los colores? jaja</p>
-          <a href="#" class="botonCerrar">OTRA VEZ 😢</a>
-      </div>
-    </section>
+          <a href="#" class="cerrarModal" id="cerrarLose">OTRA VEZ 😢</a>
+        </div>
+      
   
-    <section class="modalWin">
-      <div class="modalContenedor">
-        <img src="./img/win.png" alt="Ganador" class="modalImg">
+      <!--<section class="modalWin">-->
+        <div class="modalContenedor" id="modalContenedorWin">
+          <img src="./img/win.png" alt="Ganador" class="modalImg">
           <h2 class="modalTitulo">HAS GANADO🤑</h2>
-          <p class="modalTexto">Enhorabuena! Para nada eres daltónico, crack</p>
-          <a href="#" class="cerrarWin">¡OTRA RONDA!</a>
-      </div>
+          <p class="modalTexto">¡Enhorabuena! Para nada eres daltónico, crack</p>
+          <a href="#" class="cerrarModal" id="cerrarWin">¡OTRA RONDA!</a>
+        </div>
+        
     </section>
 <!-------------FIN MODALES GANAR Y PERDER-------------->
 
