@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adivina el Color</title>
+    <style>
+    
+    </style>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon.png"> 
+  </head>
+
+  <body>
+    <header>
+      <h1>ADIVINA EL COLOR 🎨</h1>
+      <article id="codigo-color" class="codigo-color"></article>
+
+<!--------------BOTÓN INFORMACIÓN--------------->
+      <button id="btnInfo">INFO</button>
+      <section id="infoVentana" class="ventanaInfo">
+        <article class="informacion">
+          <img src="./img/colorComplem.jpeg" alt="colores complementarios">
+          <p>Puedes ver el color complementario pulsando sobre la interrogación. 
+            Después, busca su contrario en la imagen, ¡y ya tienes la respuesta!</p>
+          <span class="cerrarInfo">Cerrar </span>
+        </article>
+      </section>
+    </header>
+<!------------FIN BOTÓN INFORMACIÓN------------->
+
+    <main class="contenedor">
+      
+      <section id="izquierda">
+  
+<!-------------PISTA COLOR COMPLEMENTARIO------------->
+        <article class="pistaColorComplementario">
+          <div class="contenidoPistaColor">
+            <div class="vistaAnterior">❔</div>
+            <div class="vistaPosterior"></div>
+          </div>
+        </article>
+<!-----------FIN PISTA COLOR COMPLEMENTARIO----------->
+
+        <article id="puntuacion" class="puntuacion">
+          <h3>ACIERTOS: <span id="correctos">0</span></h3>
+          <h3>FALLOS: <span id="incorrectos">0</span></h3>
+
+<!------------------BOTÓN REINICIAR------------------>
+          <button id="btnReinicio">REINICIAR</button>
+          <div id="miVentana" class="ventana-emergente">
+            <div class="contenido">
+                <p>¿ QUÉ QUIERES HACER ?</p>
+                <span class="reinicio"> Reiniciar</span>
+                <span class="continuar">Continuar </span>
+            </div>
+          </div>
+<!----------------FIN BOTÓN REINICIAR---------------->
+
+        </article>        
+      </section>
+
+      <section id="derecha">
+        <article id="cajas-color" class="cajas-color"></article>
+      </section>
+      
+    </main>
+
+<!---------------MODAL BIENVENIDA---------------->
+    <section class="modalBienvenida">
+      <div class="modalContenedor">
+        <img src="./img/ruedaColores.png" alt="Rueda Cromática" class="modalImg">
+          <h2 class="modalTitulo">¿Preparado?</h2>
+          <p class="modalTexto">¡ADIVINA EL COLOR CORRECTO!</p>
+
+          <p class="modalTexto1">Para ello, te damos el código RGB del color y, de regalo, una pista: el color complementario*.</p>
+        
+          <p class="modalTexto2">*¿Qué es un color complementario? Son los colores que se encuentran en la posición opuesta dentro del círculo cromático.</p>
+        
+          <a href="#" class="cerrarModal" class="cerrarModal">EMPEZAR</a>
+      </div>
+    </section>
+<!---------------FIN MODAL BIENVENIDA--------------->
+
+<!--------------MODALES GANAR Y PERDER--------------->
+    <section class="modalLose">
+      <div class="modalContenedor">
+        <img src="./img/lose.png" alt="Game Over" class="modalImg">
+          <h2 class="modalTitulo">LOOOOOSER</h2>
+          <p class="modalTexto">Vaya pringao, ¿no sabes los colores? jaja</p>
+          <a href="#" class="botonCerrar">OTRA VEZ 😢</a>
+      </div>
+    </section>
+  
+    <section class="modalWin">
+      <div class="modalContenedor">
+        <img src="./img/win.png" alt="Ganador" class="modalImg">
+          <h2 class="modalTitulo">HAS GANADO🤑</h2>
+          <p class="modalTexto">Enhorabuena! Para nada eres daltónico, crack</p>
+          <a href="#" class="cerrarWin">¡OTRA RONDA!</a>
+      </div>
+    </section>
+<!-------------FIN MODALES GANAR Y PERDER-------------->
+
+    <footer>
+      <p>Derechos de Autor: Grupo 2 - Proyectos - Hack a Boss 2024</p>
+    </footer>
+
+<!---------------------ANIMACIÓN--------------------->
+    <div class="container">
+      <div class="burbujas">
+        <span style="--i:11;"></span>
+        <span style="--i:12;"></span>
+        <span style="--i:24;"></span>
+        <span style="--i:10;"></span>
+        <span style="--i:14;"></span>
+        <span style="--i:23;"></span>
+        <span style="--i:18;"></span>
+        <span style="--i:16;"></span>
+        <span style="--i:19;"></span>
+        <span style="--i:20;"></span>
+        <span style="--i:22;"></span>
+        <span style="--i:25;"></span>
+        <span style="--i:18;"></span>
+        <span style="--i:21;"></span>
+        <span style="--i:15;"></span>
+        <span style="--i:13;"></span>
+        <span style="--i:26;"></span>
+        <span style="--i:17;"></span>
+        <span style="--i:13;"></span>
+        <span style="--i:18;"></span>
+
+      </div>
+    </div>
+<!-------------------FIN ANIMACIÓN------------------->
+
+    <script type="module" src="./js/tablero.js"></script>
+  </body>
+</html>
