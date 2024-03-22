@@ -109,14 +109,22 @@ function generarCajasColor() {
 }
 
   // Función para verificar la respuesta del jugador al  clicar una caja
-function verificarRespuesta(esCorrecto ) {
-  if (esCorrecto) {
-    puntuacionCorrectos++;
-  } else {
-    puntuacionIncorrectos++;
+  function verificarRespuesta(esCorrecto ) {
+    if (esCorrecto) {
+      puntuacionCorrectos++;
+    } else {
+      puntuacionIncorrectos++;
+    }
+    correctosElemento.classList.add("animacionAcierto");
+    incorrectosElemento.classList.add("animacionFallo");
+  
+    setTimeout(() => {
+      correctosElemento.classList.remove("animacionAcierto");
+      incorrectosElemento.classList.remove("animacionFallo");
+    }, 1000);
+  
+    actualizarPuntuaciones();
   }
-  actualizarPuntuaciones();
-}
 
   // Función para actualizar las puntuaciones mostradas en la página
 function actualizarPuntuaciones() {

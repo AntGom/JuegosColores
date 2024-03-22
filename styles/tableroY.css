@@ -275,6 +275,42 @@ h1{
   text-align: center;
 }
 
+/*Animacion Contador aciertos/fallos*/
+.animacionAcierto {
+  animation: acierto 1s ease-in-out;
+}
+
+.animacionFallo {
+  animation: fallo 1s ease-in-out;
+}
+@keyframes acierto {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes fallo {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+/*Fin de Animacion Contador aciertos/fallos*/
+
 /*----------PISTA COLOR COMPLEMENTARIO----------*/
 .pistaColorComplementario {
   margin: 20px 0px 0px 30px;
