@@ -31,11 +31,6 @@ const audioDerrota = new Audio('audio/derrota.mp3');
 const cerrarModal = document.querySelector('.cerrarModal');
 const modal = document.querySelector('.modalBienvenida');
 
-const modalLose = document.getElementsByClassName('modalLose');
-const CerrarModalLose = document.getElementsByClassName('botonCerrar');
-
-const modalWin = document.getElementsByClassName('modalWin');
-const CerrarModalWin = document.getElementsByClassName('cerrarWin');
 
   // Evento para cerrar el modal
 cerrarModal.addEventListener('click', () => {
@@ -127,6 +122,14 @@ function generarCajasColor() {
   }
 
   // Función para actualizar las puntuaciones mostradas en la página
+
+const modalContenedorLose = document.querySelector('#modalContenedorLose');
+const CerrarModalLose = document.querySelector('#cerrarLose');
+
+const modalContenedorWin = document.querySelector('#modalContenedorWin');
+const CerrarModalWin = document.querySelector('#cerrarWin');
+
+
 function actualizarPuntuaciones() {
   correctosElemento.textContent = puntuacionCorrectos;
   incorrectosElemento.textContent = puntuacionIncorrectos;
@@ -134,10 +137,10 @@ function actualizarPuntuaciones() {
 
     audioVictoria.play();
 
-    modalWin[0].style.display = 'flex';
-    if (CerrarModalWin[0]) {
-      CerrarModalWin[0].addEventListener('click', () => {
-        modalWin[0].style.display = 'none';
+    modalContenedorWin.style.display = 'grid';
+    if (CerrarModalWin) {
+      CerrarModalWin.addEventListener('click', () => {
+        modalContenedorWin.style.display = 'none';
       });
     }
     reiniciarJuego();
@@ -146,12 +149,13 @@ function actualizarPuntuaciones() {
 
 
   } else if (puntuacionIncorrectos === 3) {
+    
 
     audioDerrota.play();
-    modalLose[0].style.display = 'flex';
-    if (CerrarModalLose[0]) {
-      CerrarModalLose[0].addEventListener('click', () => {
-        modalLose[0].style.display = 'none';
+    modalContenedorLose.style.display = 'grid';
+    if (CerrarModalLose) {
+      CerrarModalLose.addEventListener('click', () => {
+        modalContenedorLose.style.display = 'none';
       });
     }
 

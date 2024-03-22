@@ -160,7 +160,7 @@ h1{
 
 
 /*-----------PRIMER MODAL BIENVENIDA-----------*/
-.modalBienvenida { 
+.modalBienvenida{ 
   left: 0;
   top: 0; 
   bottom: 0;
@@ -173,6 +173,16 @@ h1{
   align-items: stretch;
 }
 
+#modalContenedorLose, #modalContenedorWin {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  background: #111111bd;
+  display:none;
+}
 .modalContenedor{
   margin: auto;
   padding: 15px;
@@ -180,7 +190,6 @@ h1{
   max-width: 300px;
   background-color: #f9faf7;
   border-radius: 20px;
-  display: flex;
   align-items: center;
   justify-content: center;
   display: grid;

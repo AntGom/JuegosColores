@@ -20,28 +20,15 @@
       <button id="btnInfo">Info</button>
       <section id="infoVentana" class="ventanaInfo">
         <article class="informacion">
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt dolorum itaque quis vel qui ol?</p>
+          <p>¡Pon a prueba tus conocimientos sobre colores! <br> Te mostraremos un código RGB y tendrás que adivinar el color correspondiente. <br> ¡Buena suerte! 🍀
+          </p>
           <span class="cerrarInfo">Cerrar </span>
         </article>
       </section>
     </header>
 <!------------FIN BOTÓN INFORMACIÓN------------->
 
-<!---------------MODAL BIENVENIDA---------------->
-  <section class="modalBienvenida">
-    <div class="modalContenedor">
-      <img src="./img/ruedaColores.png" alt="Rueda Cromática" class="modalImg">
-        <h2 class="modalTitulo">¿Preparado?</h2>
-        <p class="modalTexto">¡ADIVINA EL COLOR CORRECTO!</p>
 
-        <p class="modalTexto1">Para ello, te damos el código RGB del color y, de regalo, una pista: el color complementario*.</p>
-        
-        <p class="modalTexto2">*¿Qué es un color complementario? Son los colores que se encuentran en la posición opuesta dentro del círculo cromático.</p>
-        
-        <a href="#" class="cerrarModal" class="cerrarModal">EMPEZAR</a>
-    </div>
-  </section>
-<!----------------FIN MODAL BIENVENIDA---------------->
 
     <main class="contenedor">
       
@@ -82,24 +69,41 @@
       
     </main>
 
+    <!---------------MODAL BIENVENIDA---------------->
+  <section class="modalBienvenida">
+    <div class="modalContenedor">
+      <img src="./img/ruedaColores.png" alt="Rueda Cromática" class="modalImg">
+        <h2 class="modalTitulo">¿Preparado?</h2>
+        <p class="modalTexto">¡ADIVINA EL COLOR CORRECTO!</p>
+
+        <p class="modalTexto1">Para ello, te damos el código RGB del color y, de regalo, una pista: el color complementario*.</p>
+        
+        <p class="modalTexto2">*¿Qué es un color complementario? Son los colores que se encuentran en la posición opuesta dentro del círculo cromático.</p>
+        
+        <a href="#" class="cerrarModal" class="cerrarModal">EMPEZAR</a>
+    </div>
+  </section>
+<!----------------FIN MODAL BIENVENIDA---------------->
+
 <!--------------MODALES GANAR Y PERDER--------------->
-    <section class="modalLose">
-      <div class="modalContenedor">
+  <section class="modalFinal">
+
+      <div class="modalContenedor" id="modalContenedorLose">
         <img src="./img/lose.png" alt="Game Over" class="modalImg">
           <h2 class="modalTitulo">LOOOOOSER</h2>
           <p class="modalTexto">Vaya pringao, no sabes los colores? jaj</p>
-          <a href="#" class="botonCerrar">OTRA VEZ 😢</a>
+          <a href="#" class="cerrarModal" id="cerrarLose">OTRA VEZ 😢</a>
       </div>
-    </section>
-  
-    <section class="modalWin">
-      <div class="modalContenedor">
+    
+    
+      <div class="modalContenedor" id="modalContenedorWin">
         <img src="./img/win.png" alt="Ganador" class="modalImg">
           <h2 class="modalTitulo">HAS GANADO🤑</h2>
           <p class="modalTexto">Enhorabuena! Para nada eres daltónico, crack</p>
-          <a href="#" class="cerrarWin">¡OTRA RONDA!</a>
+          <a href="#" class="cerrarModal" id="cerrarWin">¡OTRA RONDA!</a>
       </div>
-    </section>
+
+  </section>
 <!-------------FIN MODALES GANAR Y PERDER-------------->
 
     <footer>
