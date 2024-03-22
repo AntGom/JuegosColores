@@ -22,8 +22,6 @@ let puntuacionIncorrectos = 0;
 
 
 //AUUdios
-const audioAcierto = new Audio('audio/win1.mp3');
-const audioFallo = new Audio('audio/lose1.mp3');
 const audioVictoria = new Audio('audio/victoria.mp3');
 const audioDerrota = new Audio('audio/derrota.mp3');
 
@@ -145,12 +143,7 @@ function actualizarPuntuaciones() {
     }
     reiniciarJuego();
 
-
-
-
   } else if (puntuacionIncorrectos === 3) {
-    
-
     audioDerrota.play();
     modalContenedorLose.style.display = 'grid';
     if (CerrarModalLose) {
@@ -164,20 +157,12 @@ function actualizarPuntuaciones() {
     generarCajasColor();
   }
 }
-function actualizarPuntuacionesConSonido() {
-if (puntuacionCorrectos === 1 || puntuacionCorrectos === 2) {
-  audioAcierto.play();
-}
-else if (puntuacionIncorrectos === 1) {
-  audioFallo.play();
-}
-}
+
   // Función para reiniciar el juego
 function reiniciarJuego() {
   puntuacionCorrectos = 0;
   puntuacionIncorrectos = 0;
   actualizarPuntuaciones();
-  actualizarPuntuacionesConSonido(); ////////////////////////////////
 }
 
   //Llamar a generarCajasColor para empezar el juego
