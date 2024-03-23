@@ -1,6 +1,6 @@
 'use strict';
 
-import {abrirVentana, cerrarVentana, abrirInfo, cerrarInfo} from "./ventanas.js"
+
 import  {generarColorAleatorio, pasarColorAStr} from "./utility.js"
 
   //Seleccionar elementos del DOM y asignarlos a variables
@@ -20,6 +20,7 @@ let puntuacionCorrectos = 0;
 let puntuacionIncorrectos = 0;
 
 let deberiaPoderHacerClickEnLosColores = true;
+
 
 
 //AUUdios
@@ -166,13 +167,36 @@ function actualizarPuntuaciones() {
   }
 }
 
-  // Función para reiniciar el juego
+// Función para reiniciar el juego
 function reiniciarJuego() {
   puntuacionCorrectos = 0;
   puntuacionIncorrectos = 0;
   actualizarPuntuaciones();
 }
+function abrirVentana() {
+if (deberiaPoderHacerClickEnLosColores) {
+    document.getElementById("miVentana").style.display = "block";
+}
+}
 
-  //Llamar a generarCajasColor para empezar el juego
+function cerrarVentana() {
+if (deberiaPoderHacerClickEnLosColores) {
+    document.getElementById("miVentana").style.display = "none";
+}
+}
+
+//Funciones para abrir y cerrar la ventana de info
+function abrirInfo() {
+if (deberiaPoderHacerClickEnLosColores) {
+    document.getElementById("infoVentana").style.display = "block";
+}
+}
+
+function cerrarInfo() {
+if (deberiaPoderHacerClickEnLosColores) {
+    document.getElementById("infoVentana").style.display = "none";
+}
+}
+//Llamar a generarCajasColor para empezar el juego
 generarCajasColor();
 
