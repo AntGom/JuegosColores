@@ -250,7 +250,7 @@ h1{
 }
 
 .codigo-color {
-  font-size: 30px;
+  font-size: 27px;
   font-weight: bolder;
   text-align: center;
 }
@@ -480,7 +480,8 @@ h1{
 }
 
 .cajas-color {
-  margin-bottom: 90px;
+  margin-bottom: 65px;
+  
   display: flex;
   align-content: center;
   justify-content: center;
@@ -492,8 +493,8 @@ h1{
   margin:  5px 20px 5px 30px;
   border: solid 2px;
   border-radius: 20%;
-  width: 60px;
-  height: 60px;
+  width: 55px;
+  height: 55px;
   box-shadow: 3px 3px 0px black;
   cursor: pointer;
 }
@@ -617,9 +618,14 @@ footer {
 /*----------------MEDIA QUERY----------------*/
 /* Estilos para dispositivos móviles */
 @media screen and (max-width: 600px) {
+  .contenedor{
+    overflow: scroll;
+  }
+
   .informacion{
     overflow: scroll;
   }
+
   .modalContenedor {
     width: 90%;
     overflow: scroll;
