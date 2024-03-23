@@ -19,6 +19,7 @@ import  {generarColorAleatorio, pasarColorAStr} from "./utility.js"
 let puntuacionCorrectos = 0;
 let puntuacionIncorrectos = 0;
 
+let deberiaPoderHacerClickEnLosColores = true;
 
 
 //AUUdios
@@ -90,12 +91,16 @@ function generarCajasColor() {
     // Asignar el color correcto en posición aleatoria
     if (i === posicionCorrecta) {
       cajaColor.style.backgroundColor = pasarColorAStr(colorCorrecto);
-      cajaColor.addEventListener('click', () => verificarRespuesta(true));
+      cajaColor.addEventListener('click', () => {
+        if (deberiaPoderHacerClickEnLosColores) verificarRespuesta(true);
+      });
     } else {
       // Generar colores aleatorios para las otras cajas
       const colorAleatorio = generarColorAleatorio()
       cajaColor.style.backgroundColor = pasarColorAStr(colorAleatorio)
-      cajaColor.addEventListener('click', () => verificarRespuesta(false));
+      cajaColor.addEventListener('click', () => {
+        if (deberiaPoderHacerClickEnLosColores) verificarRespuesta(false);
+      });
     }
     cajasColorElemento.appendChild(cajaColor);
   }
@@ -134,21 +139,24 @@ function actualizarPuntuaciones() {
   if (puntuacionCorrectos === 3) {
 
     audioVictoria.play();
-
+    deberiaPoderHacerClickEnLosColores = false;
     modalContenedorWin.style.display = 'grid';
     if (CerrarModalWin) {
       CerrarModalWin.addEventListener('click', () => {
         modalContenedorWin.style.display = 'none';
+        deberiaPoderHacerClickEnLosColores = true;
       });
     }
     reiniciarJuego();
 
   } else if (puntuacionIncorrectos === 3) {
     audioDerrota.play();
+    deberiaPoderHacerClickEnLosColores = false;
     modalContenedorLose.style.display = 'grid';
     if (CerrarModalLose) {
       CerrarModalLose.addEventListener('click', () => {
         modalContenedorLose.style.display = 'none';
+        deberiaPoderHacerClickEnLosColores = true;
       });
     }
 

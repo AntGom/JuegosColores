@@ -1,19 +1,34 @@
 "use strict"
+let botonReiniciar = document.getElementById("miVentana");
+let botonInfo = document.getElementById("infoVentana");
 
 function abrirVentana() {
-    document.getElementById("miVentana").style.display = "block";
+    if (botonReiniciar.style.display === "none") {
+        botonReiniciar.style.display = "block";
+        poderHacerClickEnLosColores = false;
+    }
+    
 }
 
 function cerrarVentana() {
-    document.getElementById("miVentana").style.display = "none";
+    if (botonReiniciar.style.display !== "none") {
+        botonReiniciar.style.display = "none";
+        poderHacerClickEnLosColores = true;
+    }
 }
 
 function abrirInfo() {
-    document.getElementById("infoVentana").style.display = "block";
+    if (botonInfo.style.display === "none") {
+        botonInfo.style.display = "block";
+        poderHacerClickEnLosColores = false;
+    }
 }
 
 function cerrarInfo() {
-    document.getElementById("infoVentana").style.display = "none";
+    if (botonInfo.style.display !== "none") {
+        botonInfo.style.display = "none";
+        poderHacerClickEnLosColores = true;
+    }
 }
 
 export {abrirVentana, cerrarVentana, abrirInfo, cerrarInfo};

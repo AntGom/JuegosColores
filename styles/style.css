@@ -149,7 +149,7 @@ h1{
   bottom: 0;
   right: 0;
   background: #111111bd;
-  opacity: 1;
+  opacity: 0.9;
   position: fixed;
   z-index: 1;
   display: flex;
@@ -168,7 +168,9 @@ h1{
   display: grid;
   place-items: center;
   text-align: center;
+  opacity: 0,9;
 }
+
 
 .modalImg {
   width: 40%;
@@ -396,7 +398,7 @@ h1{
   border-radius: 20px;
   padding: 20px;
   width: 80%;
-  height: 24%;
+  height: 10rem;
   max-width: 300px;
   background-color: white;
   text-align: center;
@@ -410,10 +412,10 @@ h1{
 }
 
 .reinicio {
-  border: solid 1px;
+  border: solid 2px;
   border-radius: 10px;
-  width: 85px;
-  height: 25px;
+  
+
   box-shadow: 3px 3px 0px black; 
   background:  linear-gradient(
       90deg,
@@ -501,6 +503,7 @@ h1{
 /*-----------MODALES GANAR Y PERDER-----------*/
 #modalContenedorLose, #modalContenedorWin {
   left: 0;
+  opacity: 0.9;
   top: 55px;
   height: 60%;
   right: 0;
@@ -510,7 +513,11 @@ h1{
   z-index: 1;
   position: fixed;
   display:none;
+
 }
+
+/* .modalFinal {
+} */
 
 .cerrarModal{
   margin-bottom: 20px;
