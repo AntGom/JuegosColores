@@ -91,7 +91,7 @@ h1{
 }
 
 .informacion{
-  margin: 15% auto;
+  margin: 15px auto;
   border-radius: 20px;
   padding: 20px;
   width: 80%;
@@ -131,7 +131,6 @@ h1{
   cursor: pointer;
   display: flex;
   align-items: center;
-  align-content: center;
   justify-content: center;
   transition: background-color .3s;
 }
@@ -509,6 +508,7 @@ h1{
   padding: 15px;
   min-width: 60%;
   max-width: 300px;
+  opacity: 0.9;
   z-index: 1;
   position: fixed;
   display:none;
@@ -665,6 +665,12 @@ footer {
     height: 45px;
     border-radius: 15px;
     font-size: 22px;
+  }
+
+  .informacion{
+    margin: 15px auto;
+    width: 800px;
+    height: 400px;
   }
   
   .modalContenedor {
