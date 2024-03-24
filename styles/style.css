@@ -411,7 +411,7 @@ h1{
 }
 
 .reinicio {
-  border: solid 2px;
+  border: solid 1px;
   border-radius: 10px;
   width: 85px;
   height: 25px;
@@ -503,9 +503,8 @@ h1{
 /*-----------MODALES GANAR Y PERDER-----------*/
 #modalContenedorLose, #modalContenedorWin {
   left: 0;
-  opacity: 0.9;
   top: 55px;
-  height: 60%;
+  height: 70%;
   right: 0;
   padding: 15px;
   min-width: 60%;
@@ -516,10 +515,8 @@ h1{
 
 }
 
-/* .modalFinal {
-} */
-
 .cerrarModal{
+  margin top: 0px;
   margin-bottom: 20px;
   border-radius: 20px;
   padding: 1em 2em;
@@ -571,9 +568,6 @@ footer {
 /*----------------MEDIA QUERY----------------*/
 /* Estilos para dispositivos móviles */
 @media screen and (max-width: 600px) {
-  .contenedor{
-    overflow: scroll;
-  }
 
   .informacion{
     overflow: scroll;
@@ -581,6 +575,10 @@ footer {
 
   .modalContenedor {
     width: 90%;
+    overflow: scroll;
+  }
+
+  .contenedor{
     overflow: scroll;
   }
 }
