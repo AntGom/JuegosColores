@@ -669,8 +669,10 @@ footer {
 
   .informacion{
     margin: 15px auto;
+    padding: 150px;
     width: 800px;
-    height: 400px;
+    height: 450px;
+    font-size: 25px;
   }
   
   .modalContenedor {
